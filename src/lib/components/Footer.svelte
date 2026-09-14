@@ -20,7 +20,7 @@
 		</div>
 		<div class="flex items-center gap-2 font-mono text-xs text-stone-400 dark:text-stone-500">
 			<CrossedBones class="size-3.5" />
-			<span>© {year} deathofagile.com</span>
+			<span class="whitespace-nowrap">© {year} Klearbase LLC</span>
 		</div>
 	</div>
 </footer>

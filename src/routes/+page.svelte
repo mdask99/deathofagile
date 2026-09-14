@@ -3,11 +3,16 @@
 	import Tombstone from '$lib/components/icons/Tombstone.svelte';
 	import CrossedBones from '$lib/components/icons/CrossedBones.svelte';
 
-	const values = [
-		{ left: 'Clarity of Intent', right: 'Granularity of Tasks' },
-		{ left: 'Continuous Generation', right: 'Timeboxed Sprints' },
-		{ left: 'System Architecture', right: 'Syntax Memorization' },
-		{ left: 'Asynchronous Momentum', right: 'Synchronous Ceremonies' }
+	const articles = [
+		{ roman: 'I', left: 'Sovereignty of Intent', connector: 'over', right: 'Granular Tasking' },
+		{ roman: 'II', left: 'Continuous Synthesis', connector: 'over', right: 'Timeboxed Sprints' },
+		{
+			roman: 'III',
+			left: 'Cryptographic Trust',
+			connector: 'through',
+			right: 'Automated Verification'
+		},
+		{ roman: 'IV', left: 'Asynchronous Momentum', connector: 'over', right: 'Synchronous Theater' }
 	];
 </script>
 
@@ -15,7 +20,7 @@
 	<title>Death of Agile — Manifesto</title>
 	<meta
 		name="description"
-		content="Agile is dead. Hijacked by bureaucracy, weaponized by middle management, and rendered obsolete by AI. Meet Agentic Flow."
+		content="Agile is dead. Hijacked by bureaucracy, weaponized by middle management, and rendered obsolete by AI. Meet The Alliance Standard."
 	/>
 </svelte:head>
 
@@ -136,17 +141,17 @@
 	</section>
 
 	<section>
-		<h2>Agentic Flow</h2>
+		<h2>The Alliance Standard</h2>
 		<p>
-			<strong>Agentic Flow</strong> is the successor: a continuous pipeline instead of a sprint
+			<strong>The Alliance Standard</strong> is the successor: a formal pact between human
+			architectural intent and AI velocity. We operate in a continuous pipeline instead of a sprint
 			container. Intent in. Agents execute. Humans review tightly. You ship. Cadence is the
 			release, not the meeting. Planning is a living spec, not a PI board. Accountability stays
-			human — at merge and in production — even when the first draft came from a model.
+			human — at merge and in production — even when the first draft came from a swarm of models.
 		</p>
 		<p>
-			This is not “no process.” It is process sized to agents and to people who still own the
-			outcome. The full methodology lives on
-			<a href="/new-standard">the new standard</a>. The values it stands on are below.
+			This is not “no process.” It is process sized to agents and to the sovereign architects who
+			direct them.
 		</p>
 	</section>
 </article>
@@ -161,35 +166,38 @@
 				class="inline-flex items-center gap-2 font-mono text-xs font-medium tracking-widest text-rose-700 uppercase dark:text-rose-400"
 			>
 				<CrossedBones class="size-4" />
-				Foundational document
+				The Pact
 			</p>
 			<h2
 				id="manifesto-heading"
 				class="mt-3 font-mono text-2xl font-semibold tracking-tight text-stone-950 sm:text-3xl dark:text-stone-50"
 			>
-				Manifesto for Agentic Flow
+				The Articles of the Alliance
 			</h2>
 
 			<div
 				class="mt-8 space-y-6 border-t border-dashed border-stone-300 pt-8 font-mono text-base leading-relaxed text-stone-800 dark:border-stone-600 dark:text-stone-200"
 			>
 				<p class="text-stone-500 italic dark:text-stone-400">
-					We are uncovering better ways of shipping software by pairing humans with agents,
-					and by recognizing the productivity gains and process improvements that let us
-					develop software at scale.
+					We are uncovering better ways of shipping software by establishing a formal alliance
+					between human intellect and artificial generation. The human provides the context, the
+					judgment, and the boundaries. The agents provide the velocity, the generation, and the
+					scale.
 				</p>
 				<p class="text-stone-500 italic dark:text-stone-400">
-					Through that work we have come to value:
+					Through this pact, we adhere to these articles:
 				</p>
-				<ul class="space-y-3 text-base not-italic sm:text-lg">
-					{#each values as value}
+				<ol class="list-none space-y-3 pl-0 text-base not-italic sm:text-lg">
+					{#each articles as article}
 						<li>
-							<span class="font-semibold text-stone-950 dark:text-stone-50">{value.left}</span>
-							<span class="text-stone-400 dark:text-stone-500"> over </span>
-							<span class="text-stone-500 dark:text-stone-400">{value.right}</span>
+							<span class="font-semibold text-stone-950 dark:text-stone-50">
+								Article {article.roman}: {article.left}
+							</span>
+							<span class="text-stone-400 dark:text-stone-500"> {article.connector} </span>
+							<span class="text-stone-500 dark:text-stone-400">{article.right}</span>
 						</li>
 					{/each}
-				</ul>
+				</ol>
 				<p class="text-stone-500 italic dark:text-stone-400">
 					While there is still value in the items on the right, the reality of AI-assisted
 					engineering demands we prioritize the items on the left.
