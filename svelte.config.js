@@ -1,0 +1,15 @@
+import adapter from '@sveltejs/adapter-auto';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	kit: {
+		adapter: adapter()
+	},
+	vitePlugin: {
+		dynamicCompileOptions: ({ filename }) => ({
+			runes: filename.split(/[/\\]/).includes('node_modules') ? undefined : true
+		})
+	}
+};
+
+export default config;
